@@ -1,21 +1,21 @@
 {
-    "name" : "kapilpatel20/bvrolepermission",
-    "description" : "A Role Base Permission with fos userbundle",
-    "type" : "symfony-bundle",
+    "name": "kapilpatel20/bvrolepermission",
+    "description": "A Role Base Permission with fos userbundle",
+    "type": "symfony-bundle",
     "homepage": "https://github.com/kapilpatel20/bvrolepermission",
-    "authors" : [{
-        "name" : "Kapil",
-        "email" : "kapil.patel@brainvire.com"
-    }],
-    "keywords" : [
+    "authors": [{
+            "name": "Kapil",
+            "email": "kapil.patel@brainvire.com"
+        }],
+    "keywords": [
         "Role Base permission bundle"
     ],
-     "license": "proprietary",
-    "require" : {
-      "friendsofsymfony/user-bundle": "~2.0@dev"
+    "license": "proprietary",
+    "require": {
+        "friendsofsymfony/user-bundle": "~2.0@dev"
     },
-    "autoload" : {
-        "psr-4": { "BvRoleBundle": "" }
+    "autoload": {
+        "psr-4": {"BvRoleBundle": ""}
     },
     "minimum-stability": "dev"
 }
