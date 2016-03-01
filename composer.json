@@ -16,7 +16,7 @@
     },
     ,
     "autoload": {
-        "psr-0": { "Kap\\ContactBundle": "" }
-    }
+        "psr-0": { "BvRoleBundle": "" }
+    },
     "minimum-stability": "dev",
 }
