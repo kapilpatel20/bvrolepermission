@@ -14,8 +14,8 @@
     "require" : {
       "friendsofsymfony/user-bundle": "~2.0@dev"
     },
-    "autoload": {
-        "psr-0": { "BvRoleBundle": "" }
+    "autoload" : {
+        "psr-4": { "BvRoleBundle": "" }
     },
     "minimum-stability": "dev",
 }
