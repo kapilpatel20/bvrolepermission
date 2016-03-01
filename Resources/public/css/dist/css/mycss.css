@@ -1,0 +1,91 @@
+.lg{
+    position: relative;
+  padding: 15px;
+    float: right;
+    cursor:pointer;
+    font-size: 14px;
+	background-color: rgb(210, 214, 222);
+    color: #000;
+}
+.lg:hover{
+	color:#3c8dbc;
+}
+.user-menu{
+color: rgb(255, 255, 255);
+font-size: 14px;
+padding: 15px;
+background-color: rgb(54, 127, 169);
+}
+header{
+position: fixed !important;
+top: 0px;
+right: 0px;
+left: 0px;
+}
+.main-sidebar{
+	position:fixed !important;
+}
+.content-header > .breadcrumb {
+padding: 60px 5px !important;	
+}
+.content-header {
+    padding: 70px 15px 0 25px !important;
+}
+h3.name {
+
+    padding: 0 25px 0px !important;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.modal-title {
+text-align:center;	
+}
+.modal-dialog {
+    width: 415px !important;
+    margin: 20% auto !important;
+}
+.modal-header {
+    
+    padding: 0px !important;
+    border-bottom: 0 !important;
+}
+.modal-footer {
+    padding: 5px !important;
+}
+
+.cir{
+	display:none;
+}
+.cir1{
+	display:none;
+}
+#detailform{
+display:none;	
+}
+.content-wrapper{
+	min-height: 903px !important;
+}
+.tit{
+float: left;
+clear: both;
+width: 100%;
+}
+.form-control.terr {
+    width: 26%;
+    float: left;
+}
+.form-control.terr1 {
+    width: 28%;
+    float: left;
+}
+.cir {
+    float: left;
+    margin-top: -26px;
+}
+.cir1 {
+    float: left;
+   margin-top: -26px;
+}
+#field.clonedInput .select2-container{width:100% !important;}

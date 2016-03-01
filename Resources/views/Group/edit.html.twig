@@ -1,0 +1,87 @@
+{% extends 'BvRoleBundle::base.html.twig' %} {% block body -%}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<h1>Role Management</h1>
+	<ol class="breadcrumb">
+		<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+		<li class="active">Role Management</li>
+	</ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+        {{ form_start(form, { 'action': path('fos_user_group_edit', {'groupName': group_name}), 'attr': { 'class': 'fos_user_group_edit', 'id' : 'roleForm', 'novalidate' : true } }) }}
+         <div class="box">
+		<div class="box-header" style="padding-left: 20px;">
+			<h3 class="box-title">Add Role</h3>
+		</div>
+		<!-- /.box-header -->
+
+		<div class="register-box-body">
+			<div class="row">
+				<div class="col-sm-4">
+                                    <label for="">Name</label>
+                                    <div class="input-group">
+                                        {{ form_widget(form.name, { 'attr': { 'placeholder': 'Please Enter Name', 'class': 'form-control'}}) }}
+                                        <span class="input-group-addon"><i class="fa fa-tablet"></i></span>
+                                        <span class="text-danger">{% if form_errors(form.name) %}{{ form_errors(form.name) }}{% endif %}</span>
+                                    </div>
+
+				</div>
+				{{ form_rest(form) }}
+			</div>
+		</div>
+
+		<div class="register-box-body">
+			<div class="">
+				<div class="row">
+					<div class="col-sm-2">
+						<button class="btn btn-block btn-info">Add</button>
+					</div>
+					<div class="col-sm-2">
+						<a href="{{ path('fos_user_group_list') }}"><button type="button" class="btn btn-block btn-default">Cancel</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{{ form_end(form) }}
+
+</section>
+<!-- /.content -->
+{% endblock %}
+
+{% block javascripts %}
+
+<script src="{{ asset('bundles/bvrole/js/plugins/jQuery/jquery-1.11.1.js') }}"></script>
+<script src="{{ asset('bundles/bvrole/js/jquery/jquery.validation.min.js') }}"></script>
+
+<script>
+$(document).ready(function(){
+
+    $('form#roleForm').validate({
+             rules: {
+                 "fos_user_group_form[name]": {
+                     "required": true,
+                 }
+             },
+             messages: {
+                 "fos_user_group_form[name]": {
+                     "required": "Please enter Role name",
+                 }
+             },
+             errorPlacement: function (error, element) {
+                 error.insertAfter(element);
+             },
+             submitHandler: function(form) {
+                 form.submit();
+             }
+     });
+
+ });
+</script>
+
+{% endblock javascripts %}

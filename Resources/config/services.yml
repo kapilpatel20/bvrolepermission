@@ -1,0 +1,14 @@
+services:
+#    user.example:
+#        class: Bv\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    admin_permissions:
+       class: BvRoleBundle\Services\PermissionService
+       arguments: 
+          session:  "@session" 
+          
+    login_success_handler:
+        class: BvRoleBundle\EventListener\LoginSuccessHandler
+        arguments:  ["@router", "@security.context", "@session", "@service_container", "@doctrine.orm.entity_manager"]
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }

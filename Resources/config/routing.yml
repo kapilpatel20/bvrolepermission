@@ -1,0 +1,44 @@
+user_homepage:
+    path:     /hello/
+    defaults: { _controller: BvRoleBundle:Default:index }
+resgister:
+    path:     /resgister/
+    defaults: { _controller: BvRoleBundle:Registration:register }
+user_login:
+    path:     /login
+    defaults: { _controller: BvRoleBundle:Security:login }
+user_login_check:
+    pattern:  /login_check
+    defaults: { _controller: FOSUserBundle:Security:check }
+    
+user_logout:
+    pattern:  /logout
+    defaults: { _controller: FOSUserBundle:Security:logout }
+user_change_password:
+    path: /change-password
+    defaults: { _controller: BvRoleBundle:User:changePassword}
+forgot_password:
+    pattern:  /forgot-password
+    defaults: { _controller: FOSUserBundle:Resetting:request }
+user_edit_profile:
+    path: /edit-profile
+    defaults: { _controller: BvRoleBundle:Profile:edit}
+user_profile:
+    path: /profile/
+    defaults: { _controller: BvRoleBundle:Profile:edit}
+
+fos_user_group:
+    resource: "@BvRoleBundle/Resources/config/group.xml"
+    prefix:   /roles/
+    
+bv_admin_group_permission:
+    path:     /group/permissions/{id}
+    defaults: { _controller: BvRoleBundle:Group:permission, id:0 }
+    
+bv_group_list_json:
+     pattern:  /group/group-list-json
+     defaults: { _controller: BvRoleBundle:Group:groupListJson }  
+     
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
