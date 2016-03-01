@@ -1,0 +1,24 @@
+{
+    "name" : "kapilpatel20/bvrolepermission",
+    "description" : "A Role Base Permission with fos userbundle",
+    "type" : "symfony-bundle",
+    "homepage": "https://github.com/kapilpatel20/bvrolepermission",
+    "authors" : [{
+        "name" : "Kapil",
+        "email" : "kapil.patel@brainvire.com"
+    }],
+    "keywords" : [
+        "Role Base permission bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+       "php": ">=5.3.9",
+       "friendsofsymfony/user-bundle": "~2.0@dev"
+    },
+    "autoload" : {
+        "psr-4": { "": "src/" }
+    }
+    
+}
