@@ -10,11 +10,13 @@
     "keywords" : [
         "Role Base permission bundle"
     ],
-    "license" : [
-        "MIT"
-    ],
+     "license": "proprietary",
     "require" : {
       "friendsofsymfony/user-bundle": "~2.0@dev"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "~2.3",
+        "symfony/phpunit-bridge": "~2.7"
     },
     "minimum-stability": "dev",
     "autoload" : {
