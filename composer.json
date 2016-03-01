@@ -15,8 +15,9 @@
     ],
     "require" : {
        "php": ">=5.3.9",
-       "friendsofsymfony/user-bundle": "dev-master"
+      "friendsofsymfony/user-bundle": "~2.0@dev"
     },
+    "minimum-stability": "dev",
     "autoload" : {
         "psr-4": { "": "src/" }
     }
