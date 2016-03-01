@@ -12,7 +12,6 @@
     ],
      "license": "proprietary",
     "require" : {
-      "friendsofsymfony/user-bundle": "~2.0@dev"
-    },
-    "minimum-stability": "dev",
+      "friendsofsymfony/user-bundle"
+    }
 }
