@@ -14,5 +14,9 @@
     "require" : {
       "friendsofsymfony/user-bundle": "~2.0@dev"
     },
+    ,
+    "autoload": {
+        "psr-0": { "Kap\\ContactBundle": "" }
+    }
     "minimum-stability": "dev",
 }
