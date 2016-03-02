@@ -1,0 +1,64 @@
+{% extends "BvRoleBundle::base.html.twig" %}
+
+{% block body %}
+{% block fos_user_content %}
+{% trans_default_domain 'FOSUserBundle' %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Edit Profile </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Edit Profile</li>
+        </ol>
+    </section>
+    
+    <!-- Main content -->
+    <section class="content">
+        <p>{% include "BvRoleBundle::flashMessage.html.twig" %}</p>
+        <div class="box">
+
+            <form action="{{ path('user_edit_profile') }}" {{ form_enctype(form) }} method="POST" id="fos_user_change_password">
+                <div class="register-box-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Change Password</label>
+                            <div class="input-group">
+                                <input class="form-control" type="text">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span> </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label  class=" control-label">Confirm Password</label>
+                            <div class="input-group">
+                                <input class="form-control" type="text">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span> </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Email Id</label>
+                            <div class="input-group">
+                                {#{{ form_widget(form.email, { 'attr': {'class': 'form-control', 'placeholder': 'Email Address'}}) }}
+                                    {% if form_errors(form.email) %}{{ form_errors(form.email) }}{% endif %}#}
+                                <input class="form-control" type="text" name="email">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span> </div>
+                        </div> 
+                    </div>
+                    {{ form_rest(form)}}
+                </div>
+
+                <div class="register-box-body">
+                    <div class="">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <button class="btn btn-block btn-info" type="submit">Save</button>
+                            </div>
+                            <div class="col-sm-2">
+                                <a href="partner_management.html"><button type="submit" class="btn btn-block btn-default">Cancel</button></a></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div> 
+    </section><!-- /.content -->
+{% endblock fos_user_content %}
+{% endblock body %}

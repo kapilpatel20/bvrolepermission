@@ -19,7 +19,7 @@ user_change_password:
     defaults: { _controller: BvRoleBundle:User:changePassword}
 forgot_password:
     pattern:  /forgot-password
-    defaults: { _controller: FOSUserBundle:Resetting:request }
+    defaults: { _controller: BvRoleBundle:Resetting:request }
 user_edit_profile:
     path: /edit-profile
     defaults: { _controller: BvRoleBundle:Profile:edit}
