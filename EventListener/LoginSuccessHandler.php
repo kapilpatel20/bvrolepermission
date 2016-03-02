@@ -39,7 +39,7 @@ class LoginSuccessHandler implements AuthenticationSuccessHandlerInterface {
             $group = $admin->getGroupObject();
             $this->session->set('permissions', $group->getGroupPermissionArr());
             
-            $response = new RedirectResponse($this->router->generate('user_homepage'));
+            $response = new RedirectResponse($this->router->generate('dashoboard'));
          }else {
              
              //REMOVE SESSION AND REDIRCT TO LOGIN PAGE

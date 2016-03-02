@@ -26,7 +26,9 @@ user_edit_profile:
 user_profile:
     path: /profile/
     defaults: { _controller: BvRoleBundle:Profile:edit}
-
+dashoboard:
+    path: /dashboard/
+    defaults: { _controller: BvRoleBundle:Dashboard:index}
 fos_user_group:
     resource: "@BvRoleBundle/Resources/config/group.xml"
     prefix:   /roles/
