@@ -4,6 +4,7 @@ Role Base permission with fos userbundle
 Installation Steps
 
 1) add "friendsofsymfony/user-bundle": "~2.0@dev" in your composer.json file under "require" 
+
 2) composer require kapilpatel20/bvrolepermission
    register bundle in AppKernel.php
 
