@@ -122,7 +122,7 @@ class Permission
      *
      * @return Permission
      */
-    public function addGroup(BvRoleBundle\Entity\Group $group)
+    public function addGroup(\BvRoleBundle\Entity\Group $group)
     {
         $this->groups[] = $group;
 
@@ -134,7 +134,7 @@ class Permission
      *
      * @param \BvRoleBundle\Entity\Group $group
      */
-    public function removeGroup(BvRoleBundle\Entity\Group $group)
+    public function removeGroup(\BvRoleBundle\Entity\Group $group)
     {
         $this->groups->removeElement($group);
     }
@@ -152,11 +152,11 @@ class Permission
     /**
      * Set category
      *
-     * @param BvRoleBundle\Entity\PermissionCategory $category
+     * @param \BvRoleBundle\Entity\PermissionCategory $category
      *
      * @return Permission
      */
-    public function setCategory(BvRoleBundle\Entity\PermissionCategory $category = null)
+    public function setCategory(\BvRoleBundle\Entity\PermissionCategory $category = null)
     {
         $this->category = $category;
 
